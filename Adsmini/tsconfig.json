@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "es2015",
+    "moduleResolution": "node",
+    "target": "es5",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noStrictGenericChecks": true,
+    "strict": true,
+    "lib": [ "es6", "dom" ],
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "types": [ "webpack-env" ],
+    "typeRoots": [
+      "node_modules/@types/",
+      "webpack-env"
+    ]
+  },
+  "exclude": [ "bin", "node_modules", "wwwroot" ],
+  "atom": { "rewriteTsconfig": false }
+}

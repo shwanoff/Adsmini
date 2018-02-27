@@ -1,0 +1,29 @@
+﻿<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">{{card.title}}</h3>
+        <p class="card-subtitle card-title">{{card.date}}</p>
+        <p class="card-title float-left">{{card.city?.name}}</p>
+        <p class="card-title float-right">{{card.type?.name}}</p>
+    </div>
+    <div class="card-body">
+        <div class="card-text">
+            <h6>{{card.text}}</h6>
+            <p>{{card.longtext}}</p>
+            <p class="text-right">{{card.price | currency:'RUB':'symbol-narrow'}}</p>
+            <div class="d-block">
+                <p>
+                    <strong>{{card.name}}</strong>
+                </p>
+                <p class="float-right">
+                    {{card.phone}}
+                </p>
+            </div>
+
+            <p>
+                <a href="{{card.site}}">{{card.site}}</a>
+            </p>
+
+            <a href="#" class="badge badge-secondary" *ngFor="let tag of card.tags">{{tag}}</a>
+        </div>
+    </div>
+</div>

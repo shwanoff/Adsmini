@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] | Ads mini</title>
+    <meta name="description" content="Доска мини объявлений Ads mini">
+    <meta name="keywords" content="реклама, объявления, ads">
+    <meta name="author" content="shwanoff.ru">
+    <base href="~/" />
+    <link rel="icon" type="image/png" href="~/favicon.png">
+    <link rel="stylesheet" href="~/dist/bootstrap.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/dist/style.css" asp-append-version="true" />
+    <script src="~/dist/bootstrap.js" asp-append-version="true"></script>
+</head>
+<body>
+    @RenderBody()
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

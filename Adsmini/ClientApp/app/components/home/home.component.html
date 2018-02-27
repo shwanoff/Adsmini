@@ -1,0 +1,8 @@
+﻿<div class="alert alert-info text-center" role="alert" *ngIf="!cards">
+    Загрузка объявлений.
+</div>
+<div class="alert alert-info text-center" role="alert" *ngIf="cards?.length == 0">
+    Объявлений нет.
+</div>
+
+<card-summary-component *ngFor="let card of cards" [card]="card"></card-summary-component>

@@ -1,0 +1,20 @@
+﻿<div class="container">
+    <header-component></header-component>
+    <div class="row">
+        <div class="col-md-3">
+            <description-component></description-component>
+            <type-component title="Категории"></type-component>
+        </div>
+
+        <div class="col-md-6 bd-content">
+            <main role="main">
+                <router-outlet></router-outlet>
+            </main>
+        </div>
+
+        <div class="col-md-3 position-sticky">
+            <search-component></search-component>
+            <footer-component></footer-component>
+        </div>
+    </div>
+</div>

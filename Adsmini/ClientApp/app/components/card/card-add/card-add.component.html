@@ -1,0 +1,135 @@
+﻿<div class="alert alert-info" role="alert" [hidden]="addForm.form.valid">
+    Заполните все обязательные поля.
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Добавить объявление</h3>
+    </div>
+    <div class="card-body">
+        <div class="card-text">
+            <form (ngSubmit)="add()" #addForm="ngForm">
+                <div class="form-group">
+                    <label for="title"><strong>Заголовок*</strong></label>
+                    <input type="text"
+                           class="form-control"
+                           id="title"
+                           name="title"
+                           required
+                           [(ngModel)]="card.title"
+                           placeholder="Введите короткий заголовок объявления (50 символов)...">
+                </div>
+
+                <div class="form-group">
+                    <label for="text"><strong>Краткое описание*</strong></label>
+                    <input type="text"
+                           class="form-control"
+                           id="text"
+                           name="text"
+                           required
+                           [(ngModel)]="card.text"
+                           placeholder="Введите короткое описание объявления (140 символов)...">
+                </div>
+
+                <div class="form-group">
+                    <label for="type"><strong>Категория*</strong></label>
+                    <select class="form-control"
+                            id="type"
+                            name="type"
+                            required
+                            [(ngModel)]="card.type">
+                        <option selected value="10000000">Empty</option>
+                        <option *ngFor="let type of types" [value]="type.id">{{type.name}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="longText">Подробное описание</label>
+                    <input type="text" 
+                           class="form-control" 
+                           id="longText" 
+                           name="longText" 
+                           [(ngModel)]="card.longText"
+                           placeholder="Введите подробное описание...">
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Цена</label>
+                    <input type="number" 
+                           class="form-control" 
+                           id="price" 
+                           name="price" 
+                           [(ngModel)]="card.price"
+                           placeholder="0.00">
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Имя</label>
+                    <input type="text" 
+                           class="form-control" 
+                           id="name" 
+                           name="name" 
+                           [(ngModel)]="card.name"
+                           placeholder="Введите Ваше имя...">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Контактный телефон</label>
+                    <input type="tel" 
+                           class="form-control" 
+                           id="phone" 
+                           name="phone" 
+                           [(ngModel)]="card.phone"
+                           placeholder="+7 (999) 999-9999">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Электронная почта</label>
+                    <input type="email" 
+                           class="form-control" 
+                           id="email" 
+                           name="email" 
+                           [(ngModel)]="card.email"
+                           placeholder="mail@domen.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="site">Сайт</label>
+                    <input type="url" 
+                           class="form-control" 
+                           id="site" 
+                           name="site" 
+                           [(ngModel)]="card.site"
+                           placeholder="https://shwanoff.ru/">
+                </div>
+
+                <div class="form-group">
+                    <label for="city">Город</label>
+                    <select class="form-control"
+                            id="city"
+                            name="city"
+                            [(ngModel)]="card.city">
+                        <option selected value="10000000">Empty</option>
+                        <option *ngFor="let city of cities" [value]="city.id">{{city.name}}</option>
+                    </select>
+                </div>
+
+                <!--<div class="form-group">
+                    <label for="tags">Теги</label>
+                    <input type="text" 
+                           class="form-control" 
+                           id="tags" 
+                           name="tags" 
+                           [(ngModel)]="card.tags"
+                           placeholder="Введите теги чезез запятую...">
+                </div>-->
+
+                <button type="submit" 
+                        class="btn btn-primary float-right" 
+                        [disabled]="!addForm.form.valid">
+                    Добавить
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

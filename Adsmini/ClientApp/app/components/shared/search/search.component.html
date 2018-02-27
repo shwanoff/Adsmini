@@ -1,0 +1,14 @@
+﻿<div id="search">
+    <div class="card">
+        <div class="card-body">
+            <form class="form-inline">
+                <div class="input-group">
+                    <input type="text" #searchInput class="form-control" placeholder="Поиск" aria-label="Поиск" aria-describedby="Поиск" >
+                    <div class="input-group-append">
+                        <button (click)="search(searchInput.value)" class="btn btn-outline-secondary" type="button">Найти</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
