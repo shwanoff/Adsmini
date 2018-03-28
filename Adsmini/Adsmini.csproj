@@ -40,10 +40,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\dist\logo.png" />
-  </ItemGroup>
-
-  <ItemGroup>
     <TypeScriptCompile Include="ClientApp\app\components\card\card-add\card-add.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\card\card-detail\card-detail.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\card\card-summary\card-summary.component.ts" />

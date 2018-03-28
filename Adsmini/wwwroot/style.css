@@ -1,0 +1,35 @@
+html {
+    min-width: 250px;
+}
+
+body {
+	padding-top: 80px;
+}
+
+.badge-primary {
+	color: #fff;
+	background-color: #963fc7;
+}
+
+.card {
+	margin-bottom: 5px;
+}
+
+.card-header {
+	background-color: darkorchid;
+	text-align: center;
+}
+
+.card-header a {
+	color: white;
+}
+
+.btn-outline-secondary:hover {
+    color: white;
+    background-color: darkorchid;
+    border-color: darkorchid;
+}
+
+.card-title {
+    color: white;
+}

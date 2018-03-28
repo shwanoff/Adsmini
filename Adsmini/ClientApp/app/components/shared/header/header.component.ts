@@ -6,5 +6,5 @@
 })
 export class HeaderComponent {
     title = "header";
-    logoPath = "./dist/logo.png";
+    logoPath = "./logo.png";
 }
